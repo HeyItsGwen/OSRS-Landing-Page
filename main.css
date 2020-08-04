@@ -1,12 +1,30 @@
-#header-container {
+body {
+  background-color: #0a0905;
+}
+
+body #header-container {
   width: 100%;
   text-align: center;
+  background-color: #0a0905;
 }
 
 @media (max-width: 460px) {
-  #header-container img {
+  body #header-container img {
     height: 70%;
     width: 70%;
   }
+}
+
+body main {
+  background-image: url(images/backgroundrocks.PNG);
+}
+
+body footer {
+  text-align: center;
+  font-size: .7em;
+}
+
+body footer p {
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
