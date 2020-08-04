@@ -1,1 +1,11 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+#header-container {
+  width: 100%;
+}
+
+@media (max-width: 460px) {
+  #header-container img {
+    height: 70%;
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
