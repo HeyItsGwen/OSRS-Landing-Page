@@ -4,25 +4,120 @@ body {
 
 body #header-container {
   width: 100%;
-  padding-bottom: 0;
+  padding: 0;
+  margin-bottom: 0px;
+}
+
+body #header-container .header-background {
+  background-image: url(images/backgroundrocks.PNG);
+  max-width: 910px;
+  background-position: bottom;
+  padding: 30px 80px;
+  margin: auto -80px;
+}
+
+@media only screen and (max-width: 992px) {
+  body #header-container .header-background {
+    padding: 30px 110px;
+    margin: auto -110px;
+  }
+  body #header-container .header-background p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+body #header-container .header-background h1 {
+  position: absolute;
+  left: -100000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  top: auto;
 }
 
 @media (max-width: 460px) {
-  body #header-container img {
+  body #header-container .header-background img {
     height: 70%;
     width: 70%;
   }
 }
 
-body main {
-  border-top: 2px solid #000000;
+body #header-container .header-background .too-many {
+  margin-top: -15px;
+  font-size: 0.9em;
 }
 
-body main article {
+body main section {
   background-image: url(images/backgroundrocks.PNG);
+  background-position: center;
   width: 910px;
-  height: 200px;
   min-height: 347px;
+  padding: 20px 60px 0 60px;
+}
+
+body main section div {
+  background-image: url(images/scrollback.png);
+  background-position: center;
+  background-repeat: repeat-y;
+  margin: auto;
+}
+
+body main section div article {
+  padding: 10px 70px;
+  min-height: 150px;
+}
+
+body main section div article h2 {
+  color: #7B4F17;
+  font-weight: 550;
+  padding: 5px auto 20px auto;
+}
+
+body main section div article h2::after {
+  content: '';
+  margin: auto;
+  width: 15%;
+  border-bottom: 1px solid #7B4F17;
+  display: block;
+  padding-top: 20px;
+}
+
+body main section div article img {
+  width: 171px;
+  height: 115px;
+}
+
+body main section div article::after {
+  width: 100%;
+  border-bottom: 1px solid #7B4F17;
+  display: inline-block;
+  padding-top: 40px;
+  content: '';
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  body main section::before {
+    background-image: url(images/scrolltop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    display: inline-block;
+    content: '';
+    width: 100%;
+    margin-bottom: -15px;
+  }
+  body main section::after {
+    background-image: url(images/scrolltop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    display: inline-block;
+    content: '';
+    width: 100%;
+    margin-top: -20px;
+  }
 }
 
 body footer {
