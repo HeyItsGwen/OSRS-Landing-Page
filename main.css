@@ -1,11 +1,10 @@
 body {
-  background-color: #0a0905;
+  background-color: #000000;
 }
 
 body #header-container {
   width: 100%;
-  text-align: center;
-  background-color: #0a0905;
+  padding-bottom: 0;
 }
 
 @media (max-width: 460px) {
@@ -16,15 +15,28 @@ body #header-container {
 }
 
 body main {
+  border-top: 2px solid #000000;
+}
+
+body main article {
   background-image: url(images/backgroundrocks.PNG);
+  width: 910px;
+  height: 200px;
+  min-height: 347px;
 }
 
 body footer {
-  text-align: center;
   font-size: .7em;
 }
 
-body footer p {
+body footer container {
+  width: 910px;
+  background-image: url(images/backgroundrocks.PNG);
+  background-position: top;
+  padding-bottom: 20px;
+}
+
+body footer container p {
   margin: 0;
 }
 /*# sourceMappingURL=main.css.map */

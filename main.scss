@@ -1,4 +1,4 @@
-$background: #0a0905;
+$background: #000000;
 
 body {
 
@@ -6,8 +6,7 @@ body {
 
   #header-container {
     width: 100%;
-    text-align: center;
-    background-color: $background;
+    padding-bottom: 0;
   
     img {
       @media (max-width: 460px) {
@@ -18,16 +17,30 @@ body {
   }
   
   main {
-    background-image: url(images/backgroundrocks.PNG);
+    border-top: 2px solid #000000;
+
+    article {
+      background-image: url(images/backgroundrocks.PNG);
+      width: 910px;
+      height: 200px;
+      min-height: 347px;
+    }
   }
   
   footer {
-    text-align: center;
     font-size: .7em;
     
-    p {
-      margin: 0;
+    container {
+      width: 910px;
+      background-image: url(images/backgroundrocks.PNG);
+      background-position: top;
+      padding-bottom: 20px;
+
+      p {
+        margin: 0;
+      }
     }
+
   }
 
 }
