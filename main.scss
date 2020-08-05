@@ -8,24 +8,26 @@ body {
   #header-container {
     width: 100%;
     padding: 0;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 
     .header-background {
 
       background-image: url(images/backgroundrocks.PNG);
       max-width: 910px;
       background-position: bottom;
-      padding: 30px 80px;
-      margin: auto -80px;
+      padding: 30px 80px 0 80px;
+      margin: 0 -80px;
 
-      @media only screen and (max-width: 992px) {
-        padding: 30px 110px;
-        margin: auto -110px;
-
+      div {
         p {
           padding-left: 15px;
           padding-right: 15px;
         }
+      }
+
+      @media only screen and (max-width: 992px) {
+        padding: 30px 110px 0 110px;
+        margin: 0 -110px;
       }
 
       h1 {
@@ -57,40 +59,57 @@ body {
     section {
 
       background-image: url(images/backgroundrocks.PNG);
-      background-position: center;
+      background-position: top;
       width: 910px;
       min-height: 347px;
       padding: 20px 60px 0 60px;
 
-      div {
+      #article-div {
+
         background-image: url(images/scrollback.png);
         background-position: center;
         background-repeat: repeat-y;
         margin: auto;
 
         article {
+
           padding: 10px 70px;
           min-height: 150px;
+          background-image: none;
+
+          @media only screen and (max-width: 680px) {
+            max-width: 110vw;
+            align-self: center;
+          }
 
           h2 {
+
             color: $scrollfont;
             font-weight: 550;
             padding: 5px auto 20px auto;
+            margin-bottom: 10px;
 
             &::after {
+
               @include before-after;
               width: 15%;
               border-bottom: 1px solid $scrollfont;
               display: block;
-              padding-top: 20px;
+              margin: 10px auto;
             }
           }
 
           img {
             @include image-size;
+            margin: 10px;
+          }
+
+          p {
+            color: black;
           }
 
           &::after {
+
              width: 100%;
              border-bottom: 1px solid $scrollfont;
              display: inline-block;
@@ -104,11 +123,13 @@ body {
       @media only screen and (min-width: 768px) {
 
         &::before {
+
           @include scroll-bits;
           margin-bottom: -15px;
         }
   
         &::after {
+
           @include scroll-bits;
           margin-top: -20px;
         }

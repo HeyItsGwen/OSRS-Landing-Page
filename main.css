@@ -5,25 +5,26 @@ body {
 body #header-container {
   width: 100%;
   padding: 0;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 body #header-container .header-background {
   background-image: url(images/backgroundrocks.PNG);
   max-width: 910px;
   background-position: bottom;
-  padding: 30px 80px;
-  margin: auto -80px;
+  padding: 30px 80px 0 80px;
+  margin: 0 -80px;
+}
+
+body #header-container .header-background div p {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media only screen and (max-width: 992px) {
   body #header-container .header-background {
-    padding: 30px 110px;
-    margin: auto -110px;
-  }
-  body #header-container .header-background p {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 30px 110px 0 110px;
+    margin: 0 -110px;
   }
 }
 
@@ -50,45 +51,61 @@ body #header-container .header-background .too-many {
 
 body main section {
   background-image: url(images/backgroundrocks.PNG);
-  background-position: center;
+  background-position: top;
   width: 910px;
   min-height: 347px;
   padding: 20px 60px 0 60px;
 }
 
-body main section div {
+body main section #article-div {
   background-image: url(images/scrollback.png);
   background-position: center;
   background-repeat: repeat-y;
   margin: auto;
 }
 
-body main section div article {
+body main section #article-div article {
   padding: 10px 70px;
   min-height: 150px;
+  background-image: none;
 }
 
-body main section div article h2 {
+@media only screen and (max-width: 680px) {
+  body main section #article-div article {
+    max-width: 110vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+body main section #article-div article h2 {
   color: #7B4F17;
   font-weight: 550;
   padding: 5px auto 20px auto;
+  margin-bottom: 10px;
 }
 
-body main section div article h2::after {
+body main section #article-div article h2::after {
   content: '';
   margin: auto;
   width: 15%;
   border-bottom: 1px solid #7B4F17;
   display: block;
-  padding-top: 20px;
+  margin: 10px auto;
 }
 
-body main section div article img {
+body main section #article-div article img {
   width: 171px;
   height: 115px;
+  margin: 10px;
 }
 
-body main section div article::after {
+body main section #article-div article p {
+  color: black;
+}
+
+body main section #article-div article::after {
   width: 100%;
   border-bottom: 1px solid #7B4F17;
   display: inline-block;
