@@ -1,0 +1,154 @@
+body {
+  background-color: #000000;
+}
+
+body #header-container {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+body #header-container .header-background {
+  background-image: url(images/backgroundrocks.PNG);
+  max-width: 910px;
+  background-position: bottom;
+  padding: 30px 80px 0 80px;
+  margin: 0 -80px;
+}
+
+body #header-container .header-background div p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media only screen and (max-width: 992px) {
+  body #header-container .header-background {
+    padding: 30px 110px 0 110px;
+    margin: 0 -110px;
+  }
+}
+
+body #header-container .header-background h1 {
+  position: absolute;
+  left: -100000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  top: auto;
+}
+
+@media (max-width: 460px) {
+  body #header-container .header-background img {
+    height: 70%;
+    width: 70%;
+  }
+}
+
+body #header-container .header-background .too-many {
+  margin-top: -15px;
+  font-size: 0.9em;
+}
+
+body main section {
+  background-image: url(images/backgroundrocks.PNG);
+  background-position: top;
+  width: 910px;
+  min-height: 347px;
+  padding: 20px 60px 0 60px;
+}
+
+body main section #article-div {
+  background-image: url(images/scrollback.png);
+  background-position: center;
+  background-repeat: repeat-y;
+  margin: auto;
+}
+
+body main section #article-div article {
+  padding: 10px 70px;
+  min-height: 150px;
+  background-image: none;
+}
+
+@media only screen and (max-width: 680px) {
+  body main section #article-div article {
+    max-width: 110vw;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+body main section #article-div article h2 {
+  color: #7B4F17;
+  font-weight: 550;
+  padding: 5px auto 20px auto;
+  margin-bottom: 10px;
+}
+
+body main section #article-div article h2::after {
+  content: '';
+  margin: auto;
+  width: 15%;
+  border-bottom: 1px solid #7B4F17;
+  display: block;
+  margin: 10px auto;
+}
+
+body main section #article-div article img {
+  width: 171px;
+  height: 115px;
+  margin: 10px;
+}
+
+body main section #article-div article p {
+  color: black;
+}
+
+body main section #article-div article::after {
+  width: 100%;
+  border-bottom: 1px solid #7B4F17;
+  display: inline-block;
+  padding-top: 40px;
+  content: '';
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  body main section::before {
+    background-image: url(images/scrolltop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    display: inline-block;
+    content: '';
+    width: 100%;
+    margin-bottom: -15px;
+  }
+  body main section::after {
+    background-image: url(images/scrolltop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    display: inline-block;
+    content: '';
+    width: 100%;
+    margin-top: -20px;
+  }
+}
+
+body footer {
+  font-size: .7em;
+}
+
+body footer container {
+  width: 910px;
+  background-image: url(images/backgroundrocks.PNG);
+  background-position: top;
+  padding: 20px 0;
+}
+
+body footer container p {
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */
