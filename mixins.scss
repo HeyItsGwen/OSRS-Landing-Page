@@ -1,0 +1,14 @@
+@mixin scroll-bits {
+  background-image: url(images/scrolltop.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  display: inline-block;
+  content: '';
+  width: 100%;
+}
+
+@mixin before-after {
+  content: '';
+  margin: auto;
+}

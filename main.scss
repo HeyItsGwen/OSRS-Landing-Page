@@ -1,0 +1,160 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+body {
+
+  background-color: $background;
+
+  #header-container {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+
+    .header-background {
+
+      background-image: url(images/backgroundrocks.PNG);
+      max-width: 910px;
+      background-position: bottom;
+      padding: 30px 80px 0 80px;
+      margin: 0 -80px;
+
+      div {
+        p {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+
+      @media only screen and (max-width: 992px) {
+        padding: 30px 110px 0 110px;
+        margin: 0 -110px;
+      }
+
+      h1 {
+        position: absolute;
+        left: -100000px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        top: auto;
+      }
+    
+      img {
+        @media (max-width: 460px) {
+          height: 70%;
+          width: 70%;
+        }
+      }
+
+      .too-many {
+        margin-top: -15px;
+        font-size: 0.9em;
+      }
+    }
+
+  }
+  
+  main {
+
+    section {
+
+      background-image: url(images/backgroundrocks.PNG);
+      background-position: top;
+      width: 910px;
+      min-height: 347px;
+      padding: 20px 60px 0 60px;
+
+      #article-div {
+
+        background-image: url(images/scrollback.png);
+        background-position: center;
+        background-repeat: repeat-y;
+        margin: auto;
+
+        article {
+
+          padding: 10px 70px;
+          min-height: 150px;
+          background-image: none;
+
+          @media only screen and (max-width: 680px) {
+            max-width: 110vw;
+            align-self: center;
+          }
+
+          h2 {
+
+            color: $scrollfont;
+            font-weight: 550;
+            padding: 5px auto 20px auto;
+            margin-bottom: 10px;
+
+            &::after {
+
+              @include before-after;
+              width: 15%;
+              border-bottom: 1px solid $scrollfont;
+              display: block;
+              margin: 10px auto;
+            }
+          }
+
+          img {
+            min-width: 171px;
+            min-height: 115px;
+            max-width: 171px;
+            max-height: 115px;
+            margin: 10px;
+          }
+
+          p {
+            color: black;
+          }
+
+          &::after {
+
+             width: 100%;
+             border-bottom: 1px solid $scrollfont;
+             display: inline-block;
+             padding-top: 40px;
+             @include before-after;
+           }
+          
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+
+        &::before {
+
+          @include scroll-bits;
+          margin-bottom: -15px;
+        }
+  
+        &::after {
+
+          @include scroll-bits;
+          margin-top: -20px;
+        }
+      }
+
+    }
+  }
+  
+  footer {
+    font-size: .7em;
+    
+    container {
+      width: 910px;
+      background-image: url(images/backgroundrocks.PNG);
+      background-position: top;
+      padding: 20px 0;
+
+      p {
+        margin: 0;
+      }
+    }
+
+  }
+
+}
